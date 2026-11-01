@@ -1,1 +1,119 @@
 # kirovGid
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Путеводитель: куда сходить в моём городе</title>
+  <style>
+    :root {
+      --bg: #f4f6f8;
+      --card: #ffffff;
+      --text: #2d3436;
+      --accent: #0056b3;
+      --border: #dfe6e9;
+    }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      margin: 0;
+      padding: 24px;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    h1 { margin: 0 0 8px; font-size: 2rem; }
+    p.lead { color: #636e72; max-width: 600px; margin: 0 auto; line-height: 1.5; }
+
+    .places-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    .place-card {
+      background: var(--card);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      display: flex;
+      flex-direction: column;
+      border: 1px solid var(--border);
+    }
+    .card-img-wrapper {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+    }
+    .card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .card-body { padding: 18px; flex-grow: 1; }
+    .card-title { margin: 0 0 8px; font-size: 1.25rem; color: var(--text); }
+    .card-desc { color: #57606f; margin-bottom: 16px; line-height: 1.5; }
+    .card-footer {
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+      margin-top: auto;
+    }
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      padding: 10px 16px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 500;
+    }
+    .btn:hover { background: #004494; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Путеводитель: куда сходить</h1>
+    <p class="lead">Подборка интересных мест в моём городе: адреса, фото, советы, где сделать лучшие кадры.</p>
+  </header>
+
+  <main class="places-grid">
+
+    <!-- Место 1 -->
+    <article class="place-card">
+      <div class="card-img-wrapper">
+        <img src="assets/park.jpg" alt="Городской парк" class="card-img">
+      </div>
+      <div class="card-body">
+        <h2 class="card-title">Городской парк</h2>
+        <p class="card-desc">Отличное место для прогулок и пикников. Есть детская площадка, велодорожки и смотровая точка с видом на реку. Лучше приходить утром или на закате — меньше людей и красивый свет.</p>
+      </div>
+      <div class="card-footer">
+        <a href="https://yandex.ru/maps/?ll=37.618423,55.751244&z=15" class="btn" target="_blank" rel="noopener noreferrer">Показать на карте</a>
+      </div>
+    </article>
+
+    <!-- Место 2 -->
+    <article class="place-card">
+      <div class="card-img-wrapper">
+        <img src="assets/bridge.jpg" alt="Старый мост" class="card-img">
+      </div>
+      <div class="card-body">
+        <h2 class="card-title">Старый мост</h2>
+        <p class="card-desc">Историческое место и лучшая локация для фото на закате. Вечером красиво подсвечивается. Рядом есть смотровая площадка и скамейки для отдыха.</p>
+      </div>
+      <div class="card-footer">
+        <a href="https://maps.app.goo.gl/..." class="btn" target="_blank" rel="noopener noreferrer">Показать на карте</a>
+      </div>
+    </article>
+
+    <!-- Добавляй новые карточки по аналогии -->
+
+  </main>
+</body>
+</html>
